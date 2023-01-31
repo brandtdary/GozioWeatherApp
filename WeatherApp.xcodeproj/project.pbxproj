@@ -18,6 +18,7 @@
 		B3BEFA31298843960090C3AC /* WeatherModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BEFA30298843960090C3AC /* WeatherModels.swift */; };
 		B3BEFA33298854130090C3AC /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BEFA32298854130090C3AC /* ImageManager.swift */; };
 		B3BEFA35298858140090C3AC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BEFA34298858140090C3AC /* Location.swift */; };
+		B3FB1FA82988B89A0034A18E /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FB1FA72988B89A0034A18E /* DateFormatter+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		B3BEFA30298843960090C3AC /* WeatherModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModels.swift; sourceTree = "<group>"; };
 		B3BEFA32298854130090C3AC /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		B3BEFA34298858140090C3AC /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		B3FB1FA72988B89A0034A18E /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +76,8 @@
 				9443F8DB2837B4C800879976 /* Views */,
 				9443F8CD2837A6AF00879976 /* Assets.xcassets */,
 				B3BEFA2E29883CBA0090C3AC /* Services.swift */,
-				B3BEFA32298854130090C3AC /* ImageManager.swift */,
+				B3FB1FA92988B89F0034A18E /* Extensions */,
+				B3FB1FA62988B8730034A18E /* Managers */,
 				9443F8D22837A6AF00879976 /* Info.plist */,
 				B3BEFA30298843960090C3AC /* WeatherModels.swift */,
 				B3BEFA34298858140090C3AC /* Location.swift */,
@@ -125,6 +128,22 @@
 				60E48F65327C43C803C7537A /* Pods-WeatherApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B3FB1FA62988B8730034A18E /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B3BEFA32298854130090C3AC /* ImageManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		B3FB1FA92988B89F0034A18E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B3FB1FA72988B89A0034A18E /* DateFormatter+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D23A22CE8E8E5447AEA25A75 /* Frameworks */ = {
@@ -274,6 +293,7 @@
 				B3BEFA33298854130090C3AC /* ImageManager.swift in Sources */,
 				AFD6C688296C9AF600D81DAD /* SceneDelegate.swift in Sources */,
 				B3BEFA31298843960090C3AC /* WeatherModels.swift in Sources */,
+				B3FB1FA82988B89A0034A18E /* DateFormatter+Extensions.swift in Sources */,
 				B3BEFA35298858140090C3AC /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

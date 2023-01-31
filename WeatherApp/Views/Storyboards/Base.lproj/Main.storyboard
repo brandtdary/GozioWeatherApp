@@ -25,31 +25,35 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="Oe5-G5-yon">
-                                <rect key="frame" x="268.5" y="56" width="125.5" height="798"/>
+                                <rect key="frame" x="272.5" y="56" width="121.5" height="798"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ZnS-7V-ne1">
-                                        <rect key="frame" x="0.0" y="0.0" width="125.5" height="68.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="121.5" height="64.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cc6-xg-UDH" userLabel="Location Stack">
-                                                <rect key="frame" x="0.0" y="0.0" width="125.5" height="32"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="121.5" height="28"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Ek4-Mj-hsk">
-                                                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="32" id="4mE-KS-mBA"/>
-                                                            <constraint firstAttribute="width" constant="32" id="n8v-8A-RFN"/>
+                                                            <constraint firstAttribute="height" constant="28" id="4mE-KS-mBA"/>
+                                                            <constraint firstAttribute="width" constant="28" id="n8v-8A-RFN"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oG0-gx-dPX">
-                                                        <rect key="frame" x="40" y="0.0" width="85.5" height="32"/>
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oG0-gx-dPX">
+                                                        <rect key="frame" x="36" y="0.0" width="85.5" height="28"/>
+                                                        <gestureRecognizers/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" systemColor="tintColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="gRR-XB-o0Y" appends="YES" id="gHH-1o-VfX"/>
+                                                        </connections>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H º / L º" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9C-uL-UQ9">
-                                                <rect key="frame" x="68.5" y="48" width="57" height="20.5"/>
+                                                <rect key="frame" x="64.5" y="44" width="57" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -57,7 +61,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Eon-Ze-OwV">
-                                        <rect key="frame" x="73.5" y="163.5" width="52" height="71.5"/>
+                                        <rect key="frame" x="69.5" y="160.5" width="52" height="71.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zxE-Eq-ziv">
                                                 <rect key="frame" x="14.5" y="0.0" width="37.5" height="41"/>
@@ -99,7 +103,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1A3-hh-mHm" userLabel="Sunrise">
-                                        <rect key="frame" x="70" y="330.5" width="55.5" height="92.5"/>
+                                        <rect key="frame" x="66" y="328.5" width="55.5" height="92.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunrise" translatesAutoresizingMaskIntoConstraints="NO" id="hSg-E9-6Nr">
                                                 <rect key="frame" x="23.5" y="0.0" width="32" height="32"/>
@@ -123,7 +127,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Ed-YN-eEI" userLabel="Wind">
-                                        <rect key="frame" x="73.5" y="518" width="52" height="92.5"/>
+                                        <rect key="frame" x="69.5" y="517" width="52" height="92.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wind" translatesAutoresizingMaskIntoConstraints="NO" id="sNO-48-MMK">
                                                 <rect key="frame" x="20" y="0.0" width="32" height="32"/>
@@ -147,7 +151,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oBV-hc-csI" userLabel="Humidity">
-                                        <rect key="frame" x="64" y="705.5" width="61.5" height="92.5"/>
+                                        <rect key="frame" x="60" y="705.5" width="61.5" height="92.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="humidity" translatesAutoresizingMaskIntoConstraints="NO" id="CTA-Ad-jVS">
                                                 <rect key="frame" x="29.5" y="0.0" width="32" height="32"/>
@@ -172,6 +176,14 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEg-yN-QGU">
+                                <rect key="frame" x="0.0" y="56" width="50" height="34"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="gearshape.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="changeUnit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tw5-rD-mJ0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -180,6 +192,8 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oe5-G5-yon" secondAttribute="trailing" constant="20" id="Bvo-Ky-bJ9"/>
                             <constraint firstItem="Oe5-G5-yon" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="OGI-pV-Avh"/>
                             <constraint firstItem="Oe5-G5-yon" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-8" id="OKc-Yp-vfx"/>
+                            <constraint firstItem="tEg-yN-QGU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="VuH-Fl-QL2"/>
+                            <constraint firstItem="tEg-yN-QGU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="skC-a6-LdH"/>
                             <constraint firstItem="Coo-gn-upg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sm8-RO-MmN"/>
                         </constraints>
                     </view>
@@ -189,23 +203,34 @@
                         <outlet property="highLowTempLabel" destination="e9C-uL-UQ9" id="ewp-sa-bkU"/>
                         <outlet property="humidityLabel" destination="Rz5-yZ-725" id="4WB-Mc-WyA"/>
                         <outlet property="locationNameLabel" destination="oG0-gx-dPX" id="YUX-0N-Oq6"/>
+                        <outlet property="settingsButton" destination="tEg-yN-QGU" id="joN-QB-dqK"/>
                         <outlet property="sunriseTimeLabel" destination="2bO-77-eYC" id="ptv-VV-tYT"/>
+                        <outlet property="temperatureUnitSymbolLabel" destination="nB9-sq-MUL" id="idZ-GT-PYJ"/>
                         <outlet property="weatherImageView" destination="Coo-gn-upg" id="49v-jZ-Tgr"/>
                         <outlet property="windSpeedLabel" destination="xy5-4z-DbL" id="rMN-UF-aL2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gRR-XB-o0Y">
+                    <connections>
+                        <action selector="changeLocation" destination="BYZ-38-t0r" id="RPw-X3-sF1"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="82.608695652173921" y="101.78571428571428"/>
         </scene>
     </scenes>
     <resources>
         <image name="Image" width="800" height="800"/>
+        <image name="gearshape.circle" catalog="system" width="128" height="123"/>
         <image name="humidity" width="109.87999725341797" height="122.87999725341797"/>
         <image name="sunrise" width="256" height="256"/>
         <image name="wind" width="122.87999725341797" height="74.779998779296875"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

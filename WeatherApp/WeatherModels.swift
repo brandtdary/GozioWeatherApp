@@ -19,7 +19,8 @@ struct WeatherResponse: Codable {
     let clouds: Clouds?
     let dt: Int?
     let sys: Sys?
-    let timezone, id: Int?
+    let timezone: Int?
+    let id: Int?
     let name: String?
     let cod: Int?
     
@@ -71,8 +72,8 @@ struct WeatherResponse: Codable {
         let type: Int?
         let id: Int?
         let country: String?
-        let sunrise: Int?
-        let sunset: Int?
+        let sunrise: TimeInterval?
+        let sunset: TimeInterval?
     }
 
     // MARK: - Weather
@@ -95,7 +96,7 @@ extension WeatherResponse {
     
     func formattedTemperature(unit: UnitTemperature) -> String {
         guard let max = self.main?.tempMax, let min = self.main?.tempMin else {
-            return "Temperature Unavailable"
+            return "??"
         }
 
         let unitSymbol = unit.symbol
@@ -122,13 +123,8 @@ extension WeatherResponse {
         guard let time = self.sys?.sunrise else {
             return unknownText
         }
-        
-        let date = NSDate(timeIntervalSince1970: TimeInterval(time))
-        let utcDateFormatter = DateFormatter()
-        utcDateFormatter.dateStyle = .none
-        utcDateFormatter.timeStyle = .short
-        
-        return utcDateFormatter.string(from: date as Date).lowercased().replacingOccurrences(of: " am", with: "").replacingOccurrences(of: " pm", with: "")
+        let date = Date(timeIntervalSince1970: time)
+        return DateFormatter.utcDateFormatter.string(from: date).lowercased().replacingOccurrences(of: " am", with: "").replacingOccurrences(of: " pm", with: "")
     }
     
     func formattedWindSpeed(unit: UnitOfMeasurement) -> String {
@@ -138,7 +134,7 @@ extension WeatherResponse {
         
         // Metric & Standard are Meters per second, Imperial is Miles per Hour
         let description = unit == .imperial ? "m/h" : "m/s"
-        return "\(Int(wind)) m/s"
+        return "\(Int(wind)) \(description)"
     }
     
     func formattedHumidity() -> String {

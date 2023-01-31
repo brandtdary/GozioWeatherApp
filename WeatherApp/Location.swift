@@ -11,4 +11,5 @@ import CoreLocation
 struct Location {
     let lat: String
     let lon: String
+    let name: String
 }
