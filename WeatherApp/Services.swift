@@ -11,18 +11,23 @@ class Services {
     
     static let shared = Services()
     
-    /* https://api.openweathermap.org/data/2.5/weather?lat=33.78591032377107&lon=-84.40964058633683&appid=3aa158b2f14a9f493a8c725f8133d704&units=imperial */
-    
     let baseURL = "https://api.openweathermap.org"
     let basePath = "/data/2.5/weather"
     
     // TODO: Use Result Type
-    func getWeather(lat: String, lon: String, completionHandler: @escaping (WeatherResponse?) -> ()) {
+    func getWeather(lat: String, lon: String, unit: String?, completionHandler: @escaping (WeatherResponse?) -> ()) {
         
-        let lat = URLQueryItem(name: "lat", value: "33.78591032377107")
-        let lon = URLQueryItem(name: "lon", value: "-84.40964058633683")
-        let units = URLQueryItem(name: "units", value: "imperial")
-        let components = self.urlComponent(url: baseURL, path: basePath, queryItems: [lat, lon, units])
+        var queryItems = [URLQueryItem]()
+        let lat = URLQueryItem(name: "lat", value: lat)
+        queryItems.append(lat)
+        let lon = URLQueryItem(name: "lon", value: lon)
+        queryItems.append(lon)
+        
+        if unit != nil {
+            let units = URLQueryItem(name: "units", value: unit)
+            queryItems.append(units)
+        }
+        let components = self.urlComponent(url: baseURL, path: basePath, queryItems: queryItems)
         
         // TODO: Refactor this to not force unrwap optional
         let request = URLRequest(url: components.url!)
@@ -30,13 +35,17 @@ class Services {
         URLSession.shared.dataTask(with: request) { data, response, error in
             
             guard let responseData = data else {
-                completionHandler(nil)
+                DispatchQueue.main.async {
+                    completionHandler(nil)
+                }
                 return
             }
             
             do {
                 let weather = try JSONDecoder().decode(WeatherResponse.self, from: responseData)
-                completionHandler(weather)
+                DispatchQueue.main.async {
+                    completionHandler(weather)
+                }
             } catch {
                 print("error trying to convert data to JSON")
                 print(error)
@@ -55,16 +64,9 @@ class Services {
         if queryItems != nil {
             var items = queryItems!
             let appidQueryItem = URLQueryItem(name: "appid", value: openWeatherMapAPIKey)
-
             items.append(appidQueryItem)
-            
             components.queryItems = items
         }
-        
-//        #if DEBUG
-//        print("✅",components.url?.absoluteURL ?? "😬 Problem Creating URL")
-//        #endif
-
         return components
     }
     
