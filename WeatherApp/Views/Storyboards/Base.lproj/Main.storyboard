@@ -75,13 +75,13 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TtO-KE-YXy">
                                                         <rect key="frame" x="30" y="0.0" width="7.5" height="41"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="º" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbm-Uj-xaM">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="º" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbm-Uj-xaM">
                                                                 <rect key="frame" x="0.0" y="0.0" width="7.5" height="25"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nB9-sq-MUL">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nB9-sq-MUL">
                                                                 <rect key="frame" x="0.0" y="25" width="7.5" height="16"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                                 <nil key="textColor"/>
@@ -190,11 +190,13 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="Coo-gn-upg" secondAttribute="leading" constant="64" id="7EQ-Nv-fk4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oe5-G5-yon" secondAttribute="trailing" constant="20" id="Bvo-Ky-bJ9"/>
+                            <constraint firstItem="Ek4-Mj-hsk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tEg-yN-QGU" secondAttribute="trailing" constant="16" id="MRa-OQ-CBL"/>
                             <constraint firstItem="Oe5-G5-yon" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="OGI-pV-Avh"/>
                             <constraint firstItem="Oe5-G5-yon" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-8" id="OKc-Yp-vfx"/>
                             <constraint firstItem="tEg-yN-QGU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="VuH-Fl-QL2"/>
                             <constraint firstItem="tEg-yN-QGU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="skC-a6-LdH"/>
                             <constraint firstItem="Coo-gn-upg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sm8-RO-MmN"/>
+                            <constraint firstItem="Oe5-G5-yon" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Coo-gn-upg" secondAttribute="trailing" id="unK-gd-c68"/>
                         </constraints>
                     </view>
                     <connections>
