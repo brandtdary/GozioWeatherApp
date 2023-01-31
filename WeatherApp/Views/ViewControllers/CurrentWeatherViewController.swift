@@ -36,6 +36,7 @@ class CurrentWeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Dummy Data
         locations.append(Location(lat: "33.78591032377107", lon: "-84.40964058633683", name: "Fulton, GA"))
         locations.append(Location(lat: "33.812092", lon: "-117.918976", name: "Disneyland, CA"))
         locations.append(Location(lat: "47.606209", lon: "-122.332069", name: "Seattle, WA"))
@@ -79,12 +80,14 @@ class CurrentWeatherViewController: UIViewController {
             unit = .fahrenheit
         }
         locationNameLabel.isEnabled = false
+        settingsButton.isEnabled = false
         Services.shared.getWeather(lat: lat, lon: lon, unit: unitOfMeasurement.rawValue) { weatherResponse in
             guard let weather = weatherResponse else { return } // TODO: Add error handling
             
             self.weather = weather
             self.updateView()
             self.locationNameLabel.isEnabled = true
+            self.settingsButton.isEnabled = true
         }
     }
     
@@ -108,8 +111,9 @@ class CurrentWeatherViewController: UIViewController {
     }
     
     @IBAction func changeUnit(_ sender: Any) {
-        let alertController = UIAlertController(title: "Choose one:", message: nil, preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: "Currently Selected: \(self.unitOfMeasurement.rawValue.capitalized)", message: nil, preferredStyle: .actionSheet)
         for unit in UnitOfMeasurement.allCases {
+            if unit.rawValue == self.unitOfMeasurement.rawValue { continue }
             alertController.addAction(UIAlertAction(title: unit.rawValue.capitalized, style: .default, handler: { action in
                 DispatchQueue.main.async {
                     self.setUnit(unit: unit)

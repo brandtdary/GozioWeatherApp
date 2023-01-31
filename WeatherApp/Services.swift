@@ -47,9 +47,10 @@ class Services {
                     completionHandler(weather)
                 }
             } catch {
-                print("error trying to convert data to JSON")
+                #if DEBUG
                 print(error)
                 completionHandler(nil)
+                #endif
             }
         }.resume()
 
